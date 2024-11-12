@@ -1,0 +1,250 @@
+section {
+  background-color: #ffffff40;
+  border: 1px solid #fff6;
+  min-height: calc(100vh - 70px);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.main {
+  max-width: 120rem;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.main.fade-out {
+  opacity: 0;
+}
+
+.container {
+  /* padding: 0 4rem; */
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.sec-padding {
+  padding: 8rem 0;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e02f6b;
+}
+
+.bg-circles {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  max-width: 120rem;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-circles div {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bg-circles .circle-1 {
+  height: 6rem;
+  width: 6rem;
+  background-color: #0062b9;
+  left: 5%;
+  top: 10%;
+  opacity: 0.3;
+  animation: zoomInOut 8s linear infinite;
+}
+
+.bg-circles .circle-2 {
+  height: 8rem;
+  width: 8rem;
+  background-color: #e02f6b;
+  left: 30%;
+  top: 50%;
+  opacity: 0.4;
+  animation: bounceTop 5s ease-in-out infinite;
+}
+
+.bg-circles .circle-3 {
+  height: 12rem;
+  width: 12rem;
+  background-color: #fff;
+  top: 40%;
+  right: -6rem;
+  opacity: 0.6;
+}
+
+.bg-circles .circle-4 {
+  height: 5rem;
+  width: 5rem;
+  background-color: #ffa500;
+  top: 80%;
+  left: -3rem;
+  opacity: 0.6;
+  animation: bounceRight 8s infinite linear;
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes bounceTop {
+  0%,
+  100% {
+    transform: translateY(-5rem);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10rem);
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: 200;
+  visibility: hidden;
+}
+
+.overlay.active {
+  visibility: visible;
+}
+
+.author-info {
+  max-width: 500px;
+  height: auto;
+  background: #ddd5cd;
+  border: 1px dashed #18293c;
+  border-radius: 30px;
+  padding: 1.2rem;
+  text-transform: capitalize;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.author {
+  background-color: #00000000;
+  color: #ff8800;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.author-name {
+  color: #282828;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.about-author-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-author-info p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+.demo-link {
+  color: #ff8800;
+  font-weight: bold;
+  width: 50px;
+}
+.close-author-info {
+  background-color: transparent;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #18293c;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  font-weight: 900;
+  color: #e02f6b;
+}
+
+@media (max-width: 767px) {
+  .author-info {
+    font-weight: 400;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}

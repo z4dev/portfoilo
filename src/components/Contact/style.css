@@ -1,0 +1,126 @@
+.contact-form,
+.contact-info {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.contact-form .input-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.contact-form .input-control::placeholder {
+  color: #18293c;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.contact-form .input-control {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #ffffff40;
+  padding: 0 20px;
+  color: #18293c;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea.input-control {
+  height: 120px;
+  resize: none;
+  padding-top: 15px;
+}
+
+.contact-info-item {
+  margin: 0 0 30px;
+  padding: 0 0 0 20px;
+}
+.contact-info-item .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #dee9e0;
+  border: 1px solid #fff;
+  color: #e02f6b;
+  border-radius: 50%;
+  margin: 6px 4px 0 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.contact-info-item .social-links a:hover {
+  color: #fff;
+  background-color: #e02f6b;
+}
+
+.contact-info-item {
+  padding: 0;
+  font-family: "Poppins", sans-serifs;
+}
+.contact-info-item h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0 0 5px;
+}
+.contact-info-item p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .container {
+    padding: 0;
+  }
+
+  .home-text,
+  .home-img {
+    width: 100%;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+
+  .home-img {
+    order: -1;
+  }
+
+  .home-img .img-box {
+    max-width: 300px;
+  }
+
+  .home-text .btn {
+    margin: 0 7px 15px;
+  }
+
+  .portfolio-item {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form,
+  .contact-info,
+  .about-img,
+  .about-text {
+    width: 100%;
+  }
+
+  .contact-form-container {
+    flex-wrap: wrap-reverse;
+  }
+}
